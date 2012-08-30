@@ -440,6 +440,9 @@ struct audio_policy_service_ops {
                                     audio_format_t *pFormat,
                                     audio_channel_mask_t *pChannelMask);
 
+#ifdef OMAP_ENHANCEMENT
+    int (*set_FMRxActive)(void *service, bool state);
+#endif
 };
 
 /**********************************************************************/

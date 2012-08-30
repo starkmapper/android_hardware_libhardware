@@ -46,6 +46,9 @@ static const char *variant_keys[] = {
     "ro.hardware",  /* This goes first so that it can pick up a different
                        file on the emulator. */
     "ro.product.board",
+#ifdef OMAP_ENHANCEMENT_MULTIGPU
+    "ro.product.processor",
+#endif
     "ro.board.platform",
     "ro.arch"
 };
