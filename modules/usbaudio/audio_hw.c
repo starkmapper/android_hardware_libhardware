@@ -260,11 +260,13 @@ static int out_remove_audio_effect(const struct audio_stream *stream, effect_han
     return 0;
 }
 
+#ifndef ICS_AUDIO_BLOB
 static int out_get_next_write_timestamp(const struct audio_stream_out *stream,
                                         int64_t *timestamp)
 {
     return -EINVAL;
 }
+#endif
 
 static int adev_open_output_stream(struct audio_hw_device *dev,
                                    audio_io_handle_t handle,
